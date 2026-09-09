@@ -1,7 +1,9 @@
 # HOSTEL-MAMAGEMENT-SYSTEM
-A project aimed at designing a hostel management
 
+print("Welcome To Embu Hostels")
 print("Hostel management system")
+
+
 
 print("1. Add hostel")
 print("2. Add Student")
