@@ -1,7 +1,9 @@
 # HOSTEL-MAMAGEMENT-SYSTEM
+from logging_config import logger
 
-print("Welcome To Embu Hostels")
-print("Hostel management system")
+logger.info("Hostel Management Started")
+print("Welcome To Embu Hostels Management system ")
+logger.info("System Is Running")
 
 
 
