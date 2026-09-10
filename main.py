@@ -8,10 +8,9 @@ logger.info("Hostel Management Started")
 
 print("Welcome To Embu Hostels Management System")
 
-logger.info("System Is Running")
-
 create_tables()
 
+logger.info("System Is Running")
 
 while True:
     print("\n1. Add Hostel")
