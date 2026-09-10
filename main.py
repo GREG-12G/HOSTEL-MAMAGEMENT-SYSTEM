@@ -2,12 +2,15 @@
 from logging_config import logger
 from students import add_student, view_students
 from hostels impoprt add_hostel, view_hostels
+from database import create_tables
 
 logger.info("Hostel Management Started")
 
 print("Welcome To Embu Hostels Management System")
 
 logger.info("System Is Running")
+
+create_tables()
 
 
 while True:
