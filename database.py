@@ -45,3 +45,27 @@ def create_tables():
 
     connection.commit()
     connection.close
+
+def upgrade_database():
+    connection = get_connection()
+    cursor = connection.cursor()
+
+    # Check existing student columns
+    cursor.execute("PRAGMA table_info(students)")
+    columns = [column[1] for column in cursor.fetchall()]
+
+    if "registration_number" not in columns:
+        cursor.execute("""
+            ALTER TABLE students
+            ADD COLUMN registration_number TEXT
+        """)
+
+    if "course" not in columns:
+        cursor.execute("""
+            ALTER TABLE students
+            ADD COLUMN course TEXT
+        """)
+
+    connection.commit()
+    connection.close()
+
