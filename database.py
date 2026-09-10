@@ -5,17 +5,13 @@ DATABASE_NAME = "hostel.db"
 
 
 def get_connection():
-    """Create and return a database connection."""
     return sqlite3.connect(DATABASE_NAME)
 
 
 def create_tables():
-    """Create the database tables if they don't already exist."""
-
     connection = get_connection()
     cursor = connection.cursor()
 
-    # Hostels table
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS hostels (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -25,7 +21,6 @@ def create_tables():
         )
     """)
 
-    # Students table
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS students (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -37,7 +32,6 @@ def create_tables():
         )
     """)
 
-    # Payments table
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS payments (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -49,4 +43,4 @@ def create_tables():
     """)
 
     connection.commit()
-    connection.close()
+    connection.close
