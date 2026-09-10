@@ -1,6 +1,6 @@
-import loggoing
-loggin.basicConfig(
+import logging
+logging.basicConfig(
   level = logging.INFO,
   format = "%(asctime)s - %(levelname)s - %(message)s"
 )
-logger.info("system is running")
+logger = logging.getLogger(__name__)
