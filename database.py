@@ -26,6 +26,7 @@ def create_tables():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
             phone TEXT,
+            course TEXT,
             hostel_id INTEGER,
             room_number TEXT,
             FOREIGN KEY (hostel_id) REFERENCES hostels(id)
